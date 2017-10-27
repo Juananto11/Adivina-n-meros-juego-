@@ -1,0 +1,180 @@
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+html{
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+
+body{
+  background:#F0F;
+  margin: 0;
+}
+h1{
+  border-bottom: 2px solid white;
+  margin: 0;
+  padding: .5em;
+  font-size: 1.5em;
+  text-align: center;
+  box-shadow: 0 3px 5px rgba(0,0,0,.5);
+}
+p{
+  margin: .5em 0;
+  padding: 0 .5em;
+  text-align: center;
+  letter-spacing: .1em;
+}
+span{
+  font-weight: 700;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1em;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}
+.numeros{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.numero_aleatorio p:nth-child(2){
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 160px;
+  height: 160px;
+  font-size: 7em;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.numero_usuario{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  padding-top: 15px;
+}
+.popup{
+  background: red;
+  font-weight: 300;
+  padding: .3em;
+  border-radius: 5px;
+  position: absolute;
+  text-align: center;
+  top: 148px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.popup::after{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  display: block;
+  border-top: 10px solid red;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.popup span{
+  text-decoration: underline;
+}
+.oculto{
+  display: none;
+}
+.visible{
+  display: inline;
+}
+.signos{
+  position: relative;
+  width: 100%;
+  height: 25px;
+}
+.signo{
+  visibility: hidden;
+  position: absolute;
+  top: -28px;
+  left: 18px;
+  font-size: 2em;
+  font-weight: 600;
+}
+.mas {
+  visibility: visible;
+}
+.numero_usuario input{
+  background: #F0F;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  width: 100%;
+  padding: .2em .3em;
+  animation: brillo 1s infinite;
+}
+.play{
+  width: 100%;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.play::before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 8px;
+  left: 23%;
+  border-top: 20px solid transparent;
+  border-right: 50px solid transparent;
+  border-left: 50px solid white;
+  border-bottom: 20px solid transparent;
+}
+.play p{
+  font-size: 1.2em;
+  font-weight: 700;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+}
+.intentos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.intentos p:nth-child(1){
+  width: 100%;
+  padding: .5em;
+  font-weight: 700;
+}
+.intento{
+  display: flex;
+  width: 2em;
+  height: 2em;
+  border: 1px solid white;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin: 0.1em .5em;
+}
+
+@keyframes brillo {
+  0% {box-shadow: 0 0 5px white;}
+  50% {box-shadow: 0 0 20px white;}
+  100%{box-shadow: 0 0 5px white;}
+}
